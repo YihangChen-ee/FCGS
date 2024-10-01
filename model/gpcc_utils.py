@@ -153,7 +153,7 @@ def read_binary_data(dst_bin_path: str, src_file_handle) -> None:
 def compress_gaussian_params(
         gaussian_params,
         bin_path,
-        gpcc_codec_path='/home/ps/YihangChen/gaussian-splatting_generation_L40S/mpeg-pcc-tmc13-master/build/tmc3/tmc3'
+        gpcc_codec_path='tmc3'
 ):
     """
     Compress Gaussian model parameters.
@@ -201,7 +201,7 @@ def compress_gaussian_params(
 
 def decompress_gaussian_params(
         bin_path,
-        gpcc_codec_path='/home/ps/YihangChen/gaussian-splatting_generation_L40S/mpeg-pcc-tmc13-master/build/tmc3/tmc3'
+        gpcc_codec_path='tmc3'
 ):
     """
     Decompress Gaussian model parameters.
