@@ -65,7 +65,7 @@ python encode_single_scene.py --lmd A_lambda --ply_path_from PATH/TO/LOAD/point_
  - ```lmd```: the trade-off parameter for size and fidelity. Chosen in [```1e-4```, ```2e-4```, ```4e-4```, ```8e-4```, ```16e-4```].
  - ```ply_path_from```: path to load the source *.ply* file.
  - ```bit_path_to```: path to save the compressed bitstreams.
- - ```determ```: see [atomic statement](https://github.com/YihangChen-ee/HAC/blob/main/docs/atomic_statement.md)
+ - ```determ```: see [atomic statement](https://github.com/YihangChen-ee/FCGS/blob/main/docs/atomic_statement.md)
 
 To decompress a *.ply* file from bitstreams, simply run:
 
