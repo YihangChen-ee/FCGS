@@ -81,6 +81,9 @@ python decode_single_scene.py --lmd A_lambda --bit_path_from PATH/TO/LOAD/BITSTR
 ### Tips
 FCGS is compatible with pruning-based techniques such as [Mini-Splatting](https://github.com/fatPeter/mini-splatting) and [Trimming the fat](https://github.com/salmanali96/trimming-the-fat). You can *directly* apply FCGS to the *.ply* file output by these two approaches to further boost the compression performance.
 
+## CUDA accelerated arithmetic codec
+We alongside publish a CUDA-based arithmetic codec implementation, you can find it in [arithmetic.zip](https://github.com/YihangChen-ee/FCGS/blob/main/submodules/arithmetic.zip)
+
 ## Contact
 
 - Yihang Chen: yhchen.ee@sjtu.edu.cn
