@@ -58,6 +58,9 @@ conda env create --file environment.yml
 conda activate FCGS_env
 ```
 
+3. Install tmc3 (for GPCC)
+Please refer to [tmc3 github](https://github.com/MPEGGroup/mpeg-pcc-tmc13) for installation.
+
 ## Run
 FCGS can *directly* compress any existing 3DGS representations to bitstreams. The input should be a *.ply* file following the format of 3DGS.
 
