@@ -58,7 +58,8 @@ conda env create --file environment.yml
 conda activate FCGS_env
 ```
 
-3. Install tmc3 (for GPCC)
+3. Install ```tmc3``` (for GPCC)
+
 Please refer to [tmc3 github](https://github.com/MPEGGroup/mpeg-pcc-tmc13) for installation.
 
 ## Run
