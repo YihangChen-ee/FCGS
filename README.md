@@ -41,17 +41,12 @@ Our compression time is only ```1/10``` compared to others!
 ## Installation
 
 We tested our code on a server with Ubuntu 20.04.1, cuda 11.8, gcc 9.4.0. We use NVIDIA L40s GPU (48G).
-1. Unzip files
+
+1. Clone our code
 ```
-cd submodules
-unzip diff-gaussian-rasterization.zip
-unzip simple-knn.zip
-unzip freqencoder.zip
-unzip gridencoder.zip
-unzip gridcreater.zip
-unzip arithmetic.zip
-cd ..
+git clone https://github.com/YihangChen-ee/FCGS.git
 ```
+
 2. Install environment
 ```
 conda env create --file environment.yml
