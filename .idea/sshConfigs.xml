@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<project version="4">
-  <component name="SshConfigs">
-    <configs>
-      <sshConfig authType="PASSWORD" host="hz-t3.matpool.com" id="75ae6491-01ad-4a97-beb9-6e49358d9b3d" port="30001" nameFormat="DESCRIPTIVE" username="sjtu" useOpenSSHConfig="true" />
-    </configs>
-  </component>
-</project>
