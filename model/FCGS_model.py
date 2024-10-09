@@ -341,6 +341,7 @@ class FCGS(nn.Module):
         c_size_fea, c_size_feq, c_size_geo = chunk_size_list
         g_xyz, g_fea = sorted_orig_voxels(g_xyz, g_fea)  # to morton order
         # doing compression
+        print('Start compressing xyz...')
         bits_xyz = compress_gaussian_params(
             gaussian_params=g_xyz,
             bin_path=os.path.join(root_path, 'xyz_gpcc.bin')
@@ -614,6 +615,7 @@ class FCGS(nn.Module):
         c_size_fea, c_size_feq, c_size_geo = chunk_size_list
         g_xyz, g_fea = sorted_orig_voxels(g_xyz, g_fea)  # to morton order
         # doing compression
+        print('Start compressing xyz...')
         bits_xyz = compress_gaussian_params(
             gaussian_params=g_xyz,
             bin_path=os.path.join(root_path, 'xyz_gpcc.bin')
@@ -884,6 +886,7 @@ class FCGS(nn.Module):
 
     def decomprss(self, means=None, stds=None, root_path='./', chunk_size_list=()):
         c_size_fea, c_size_feq, c_size_geo = chunk_size_list
+        print('Start decompressing xyz...')
         g_xyz = decompress_gaussian_params(
             bin_path=os.path.join(root_path, 'xyz_gpcc.bin'),
         )[0]  # [N_g, 3]

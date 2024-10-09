@@ -44,7 +44,7 @@ We tested our code on a server with Ubuntu 20.04.1, cuda 11.8, gcc 9.4.0. We use
 
 1. Clone our code
 ```
-git clone https://github.com/YihangChen-ee/FCGS.git
+git clone https://github.com/YihangChen-ee/FCGS.git --recursive
 ```
 
 2. Install environment
@@ -62,24 +62,31 @@ conda activate FCGS_env
 ## Run
 FCGS can *directly* compress any existing 3DGS representations to bitstreams. The input should be a *.ply* file following the format of 3DGS.
 
-To compress a *.ply* file to bitstreams, simply run:
+### To compress a *.ply* file to bitstreams, simply run:
 
 ```
 python encode_single_scene.py --lmd A_lambda --ply_path_from PATH/TO/LOAD/point_cloud.ply --bit_path_to PATH/TO/SAVE/BITSTREAMS --determ 1
 ```
  - ```lmd```: the trade-off parameter for size and fidelity. Chosen in [```1e-4```, ```2e-4```, ```4e-4```, ```8e-4```, ```16e-4```].
- - ```ply_path_from```: path to load the source *.ply* file.
- - ```bit_path_to```: path to save the compressed bitstreams.
+ - ```ply_path_from```: A *.ply* file. Path to load the source *.ply* file.
+ - ```bit_path_to```: A directory. Path to save the compressed bitstreams.
  - ```determ```: see [atomic statement](https://github.com/YihangChen-ee/FCGS/blob/main/docs/atomic_statement.md)
 
-To decompress a *.ply* file from bitstreams, simply run:
+### To decompress a *.ply* file from bitstreams, simply run:
 
 ```
 python decode_single_scene.py --lmd A_lambda --bit_path_from PATH/TO/LOAD/BITSTREAMS --ply_path_to PATH/TO/SAVE/point_cloud.ply
 ```
  - ```lmd```: the trade-off parameter for size and fidelity. Chosen in [```1e-4```, ```2e-4```, ```4e-4```, ```8e-4```, ```16e-4```].
- - ```bit_path_from```: path to load the compressed bitstreams.
- - ```ply_path_to```: path to save the decompressed *.ply* file.
+ - ```bit_path_from```: A directory. Path to load the compressed bitstreams.
+ - ```ply_path_to```: A *.ply* file. Path to save the decompressed *.ply* file.
+
+### To decompress a *.ply* file from bitstreams and validate fidelity of the decompressed 3DGS, simply run:
+
+```
+python decode_single_scene_validate.py --lmd A_lambda --bit_path_from PATH/TO/LOAD/BITSTREAMS --ply_path_to PATH/TO/SAVE/point_cloud.ply --source_path PATH/TO/SOURCE/SCENES
+```
+ - ```source_path```: A directory. Path to load the source scene images for validation.
 
 ### Tips
 FCGS is compatible with pruning-based techniques such as [Mini-Splatting](https://github.com/fatPeter/mini-splatting) and [Trimming the fat](https://github.com/salmanali96/trimming-the-fat). You can *directly* apply FCGS to the *.ply* file output by these two approaches to further boost the compression performance.
