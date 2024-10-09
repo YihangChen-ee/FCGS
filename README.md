@@ -44,7 +44,7 @@ We tested our code on a server with Ubuntu 20.04.1, cuda 11.8, gcc 9.4.0. We use
 
 1. Clone our code
 ```
-git clone https://github.com/YihangChen-ee/FCGS.git --recursive
+git clone git@github.com:YihangChen-ee/FCGS.git --recursive
 ```
 
 2. Install environment
