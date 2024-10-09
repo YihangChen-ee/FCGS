@@ -111,9 +111,6 @@ If you find our work helpful, please consider citing:
 }
 ```
 
-## LICENSE
-
-Please follow the LICENSE of [3D-GS](https://github.com/graphdeco-inria/gaussian-splatting).
 
 ## Acknowledgement
 
