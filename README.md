@@ -1,6 +1,6 @@
 # [ARXIV'24] FCGS
 Official Pytorch implementation of **Fast Feedforward 3D Gaussian Splatting Compression**.
-## A fast, hassle-free and optimization-free solution for post-training 3D Gaussian Splatting Compression!
+## A fast, hassle-free and optimization-free solution for 3D Gaussian Splatting Compression!
 
 [Yihang Chen](https://yihangchen-ee.github.io), 
 [Qianyi Wu](https://qianyiwu.github.io), 
