@@ -106,7 +106,7 @@ If you find our work helpful, please consider citing:
 @article{fcgs2024,
   title={Fast Feedforward 3D Gaussian Splatting Compression},
   author={Chen, Yihang and Wu, Qianyi and Li, Mengyao and Lin, Weiyao and Harandi, Mehrtash and Cai, Jianfei},
-  journal={arXiv preprint arXiv:2410.08017},
+  journal={arXiv preprint},
   year={2024}
 }
 ```
