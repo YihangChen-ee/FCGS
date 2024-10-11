@@ -9,13 +9,13 @@ Official Pytorch implementation of **Fast Feedforward 3D Gaussian Splatting Comp
 [Mehrtash Harandi](https://sites.google.com/site/mehrtashharandi/),
 [Jianfei Cai](http://jianfei-cai.github.io)
 
-[[`Arxiv`](xxx)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)] [[`Github`](https://github.com/YihangChen-ee/FCGS)]
+[[`Arxiv`](https://arxiv.org/abs/2410.08017)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)] [[`Github`](https://github.com/YihangChen-ee/FCGS)]
 
 ## Links
 Welcome to check a series of works from our group on 3D radiance field representation compression as listed below:
 - 🎉 [CNC](https://github.com/yihangchen-ee/cnc/) [CVPR'24] is now released for efficient NeRF compression! [[`Paper`](https://openaccess.thecvf.com/content/CVPR2024/papers/Chen_How_Far_Can_We_Compress_Instant-NGP-Based_NeRF_CVPR_2024_paper.pdf)] [[`Arxiv`](https://arxiv.org/abs/2406.04101)] [[`Project`](https://yihangchen-ee.github.io/project_cnc/)]
 - 🏠 [HAC](https://github.com/yihangchen-ee/hac/) [ECCV'24] is now released for efficient 3DGS compression! [[`Paper`](https://www.ecva.net/papers/eccv_2024/papers_ECCV/papers/01178.pdf)] [`Arxiv`](https://arxiv.org/abs/2403.14530)] [[`Project`](https://yihangchen-ee.github.io/project_hac/)]
-- 🚀 [FCGS](https://github.com/yihangchen-ee/fcgs/) [ARXIV'24] is now released for fast optimization-free 3DGS compression! (stay tuned) [[`Arxiv`](https://arxiv.org/abs/xxxx.xxxxx)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)]
+- 🚀 [FCGS](https://github.com/yihangchen-ee/fcgs/) [ARXIV'24] is now released for fast optimization-free 3DGS compression! [[`Arxiv`](https://arxiv.org/abs/2410.08017)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)]
 
 ## Overview
 <p align="left">
@@ -44,7 +44,7 @@ We tested our code on a server with Ubuntu 20.04.1, cuda 11.8, gcc 9.4.0. We use
 
 1. Clone our code
 ```
-git clone git@github.com:YihangChen-ee/FCGS.git --recursive
+git clone https://github.com/YihangChen-ee/FCGS.git --recursive
 ```
 
 2. Install environment
@@ -60,7 +60,7 @@ conda activate FCGS_env
 - Tips: ```tmc3``` is commonly located at ```/PATH/TO/mpeg-pcc-tmc13/build/tmc3```.
 
 ## Run
-FCGS can *directly* compress any existing 3DGS representations to bitstreams. The input should be a *.ply* file following the 3DGS format.
+FCGS can *directly* compress any existing 3DGS representations to bitstreams. The input should be a *.ply* file following the format of 3DGS.
 
 ### To compress a *.ply* file to bitstreams, simply run:
 
@@ -72,7 +72,7 @@ python encode_single_scene.py --lmd A_lambda --ply_path_from PATH/TO/LOAD/point_
  - ```bit_path_to```: A directory. Path to save the compressed bitstreams.
  - ```determ```: see [atomic statement](https://github.com/YihangChen-ee/FCGS/blob/main/docs/atomic_statement.md)
 
-### To decompress a *.ply* file from bitstreams, run:
+### To decompress a *.ply* file from bitstreams, simply run:
 
 ```
 python decode_single_scene.py --lmd A_lambda --bit_path_from PATH/TO/LOAD/BITSTREAMS --ply_path_to PATH/TO/SAVE/point_cloud.ply
@@ -92,10 +92,9 @@ python decode_single_scene_validate.py --lmd A_lambda --bit_path_from PATH/TO/LO
 FCGS is compatible with pruning-based techniques such as [Mini-Splatting](https://github.com/fatPeter/mini-splatting) and [Trimming the fat](https://github.com/salmanali96/trimming-the-fat). You can *directly* apply FCGS to the *.ply* file output by these two approaches to further boost the compression performance.
 
 ## CUDA accelerated arithmetic codec
-We alongside publish a CUDA-based arithmetic codec implementation, you can find it in [arithmetic](https://github.com/YihangChen-ee/FCGS/blob/main/submodules/arithmetic) and its usage [here](https://github.com/YihangChen-ee/FCGS/blob/main/model/encodings_cuda.py).
+We alongside publish a CUDA-based arithmetic codec implementation, you can find it in [arithmetic.zip](https://github.com/YihangChen-ee/FCGS/blob/main/submodules/arithmetic) and its usage [here](https://github.com/YihangChen-ee/FCGS/blob/main/model/encodings_cuda.py).
 
 ## Contact
-
 - Yihang Chen: yhchen.ee@sjtu.edu.cn
 
 ## Citation
@@ -106,11 +105,14 @@ If you find our work helpful, please consider citing:
 @article{fcgs2024,
   title={Fast Feedforward 3D Gaussian Splatting Compression},
   author={Chen, Yihang and Wu, Qianyi and Li, Mengyao and Lin, Weiyao and Harandi, Mehrtash and Cai, Jianfei},
-  booktitle={arXiv preprint},
+  journal={arXiv preprint arXiv:2410.08017},
   year={2024}
 }
 ```
 
+## LICENSE
+
+Please follow the LICENSE of [3D-GS](https://github.com/graphdeco-inria/gaussian-splatting).
 
 ## Acknowledgement
 
