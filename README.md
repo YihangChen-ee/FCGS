@@ -9,7 +9,7 @@ Official Pytorch implementation of **Fast Feedforward 3D Gaussian Splatting Comp
 [Mehrtash Harandi](https://sites.google.com/site/mehrtashharandi/),
 [Jianfei Cai](http://jianfei-cai.github.io)
 
-[[`Arxiv`](https://github.com/YihangChen-ee/FCGS/blob/main/Fast_Feedforward_3D_Gaussian_Splatting_Compression____ARXIV.pdf)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)] [[`Github`](https://github.com/YihangChen-ee/FCGS)]
+[[`Arxiv`](https://yihangchen-ee.github.io/Fast_Feedforward_3D_Gaussian_Splatting_Compression____ARXIV.pdf)] [[`Project`](https://yihangchen-ee.github.io/project_fcgs/)] [[`Github`](https://github.com/YihangChen-ee/FCGS)]
 
 ## Links
 Welcome to check a series of works from our group on 3D radiance field representation compression as listed below:
