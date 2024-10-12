@@ -153,7 +153,7 @@ def read_binary_data(dst_bin_path: str, src_file_handle) -> None:
 def compress_gaussian_params(
         gaussian_params,
         bin_path,
-        gpcc_codec_path='tmc3'
+        gpcc_codec_path='tmc3'  # change tmc3 path
 ):
     """
     Compress Gaussian model parameters.
@@ -201,7 +201,7 @@ def compress_gaussian_params(
 
 def decompress_gaussian_params(
         bin_path,
-        gpcc_codec_path='tmc3'
+        gpcc_codec_path='tmc3'  # change tmc3 path
 ):
     """
     Decompress Gaussian model parameters.
