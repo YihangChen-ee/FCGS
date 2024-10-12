@@ -115,3 +115,4 @@ If you find our work helpful, please consider citing:
 ## Acknowledgement
 
  - We thank all authors from [3D-GS](https://github.com/graphdeco-inria/gaussian-splatting) for presenting such an excellent work.
+ - We thank [Xiangrui](https://liuxiangrui.github.io)'s help on GPCC codec.
