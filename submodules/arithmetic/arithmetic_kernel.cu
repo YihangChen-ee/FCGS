@@ -198,7 +198,7 @@ std::tuple<torch::Tensor, torch::Tensor> arithmetic_encode_cu(
     TORCH_CHECK(sym.dim() == 1, "Expected sym to have 1 dimension, but got ", sym.dim());
     TORCH_CHECK(cdf.dim() == 2, "Expected cdf to have 2 dimensions, but got ", cdf.dim());
 
-    int threads_per_block = 128;
+    int threads_per_block = 1;
     int blocks = (chunk_num + threads_per_block - 1) / threads_per_block;
 
     encode_arithmetic_kernel<<<blocks, threads_per_block>>>(
@@ -382,7 +382,7 @@ torch::Tensor arithmetic_decode_cu(
     TORCH_CHECK(in_cnt_cum_all.dim() == 1, "Expected in_cnt_cum_all to have 1 dimension, but got ", in_cnt_cum_all.dim());
     TORCH_CHECK(in_cnt_all.dim() == 1, "Expected in_cnt_all to have 1 dimension, but got ", in_cnt_all.dim());
 
-    int threads_per_block = 128;
+    int threads_per_block = 1;
     int blocks = (chunk_num + threads_per_block - 1) / threads_per_block;
 
     decode_arithmetic_kernel<<<blocks, threads_per_block>>>(
