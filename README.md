@@ -104,11 +104,11 @@ We alongside publish a CUDA-based arithmetic codec implementation (based on [tor
 If you find our work helpful, please consider citing:
 
 ```bibtex
-@article{fcgs2024,
+@inproceedings{fcgs2025,
   title={Fast Feedforward 3D Gaussian Splatting Compression},
   author={Chen, Yihang and Wu, Qianyi and Li, Mengyao and Lin, Weiyao and Harandi, Mehrtash and Cai, Jianfei},
-  journal={arXiv preprint arXiv:2410.08017},
-  year={2024}
+  booktitle={The Thirteenth International Conference on Learning Representations},
+  year={2025}
 }
 ```
 
