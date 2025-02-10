@@ -11,13 +11,17 @@ import sys
 
 def train(args):
     # assert False, 'check scene dataloader first!'
-    per_step_size = 100_0000
 
     with torch.no_grad():
         gaussians = GaussianModel(3)  # dataset.sh_degree = 3
         gaussians.load_ply(path=args.ply_path_from)
     g_xyz = gaussians._xyz.detach()
     N_gaussian = g_xyz.shape[0]
+
+    per_step_size = 100_0000
+    if N_gaussian > 100_0000 and N_gaussian < 110_0000:
+        per_step_size = 110_0000
+
     _features_dc = gaussians._features_dc.detach().view(N_gaussian, -1)  # [N, 1, 3] -> [N, 3]
     _features_rest = gaussians._features_rest.detach().view(N_gaussian, -1)  # [N, 15, 3] -> [N, 45]
     _opacity = gaussians._opacity.detach()  # [N, 1]
@@ -39,6 +43,7 @@ def train(args):
 
     ttl_size = 0
     CM.eval()
+    torch.cuda.synchronize(); t1 = time.time()
     with torch.no_grad():
         for s in range(step_num):
             bit_save_path = os.path.join(args.bit_path_to, f"{lmd}/{s}")
@@ -46,6 +51,8 @@ def train(args):
             g_xyz_in = g_xyz[s*per_step_size:s*per_step_size+per_step_size]
             g_fea_in = g_fea[s*per_step_size:s*per_step_size+per_step_size]
             ttl_size += CM.compress(g_xyz_in, g_fea_in, root_path=bit_save_path, chunk_size_list=chunk_size_list, determ_codec=args.determ)[3]
+    torch.cuda.synchronize(); t2 = time.time()
+    print('time:', t2-t1)
 
     print(f"{args.ply_path_from} compressed! Save bitstreams to {args.bit_path_to}.")
     orig_size = os.path.getsize(args.ply_path_from)/1024/1024
