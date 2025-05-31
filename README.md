@@ -62,6 +62,8 @@ conda activate FCGS_env
 - Tips: ```tmc3``` is commonly located at ```PATH/TO/mpeg-pcc-tmc13/build/tmc3```.
 
 ## Dataset
+DL3DV-GS-960P dataset contains 6939 samples of `undistorted images`, `camera poses`, and `pre-trained 3DGS`, under 960P resolution.
+This dataset is originated from DL3DV, and post processed by us. More information can be found in our paper's Appendix.
 - The dataset is now open-source under the DL3DV license. Please find the downloading instructions in the [DL3DV-GS-960P](https://huggingface.co/datasets/DL3DV/DL3DV-GS-960P) page.
 - Downloading script can be found [here](https://github.com/YihangChen-ee/FCGS/blob/main/dataset/download_DL3DV-GS-960P.py).
 - Training set can be found [here](https://github.com/YihangChen-ee/FCGS/blob/main/dataset/hash_name_train.txt).
