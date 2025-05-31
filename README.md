@@ -65,9 +65,6 @@ conda activate FCGS_env
 DL3DV-GS-960P dataset contains 6939 samples of `undistorted images`, `camera poses`, and `pre-trained 3DGS`, under 960P resolution.
 This dataset is originated from DL3DV, and post processed by us. More information can be found in our paper's Appendix.
 - The dataset is now open-source under the DL3DV license. Please find the downloading instructions in the [DL3DV-GS-960P](https://huggingface.co/datasets/DL3DV/DL3DV-GS-960P) page.
-- Downloading script can be found [here](https://github.com/YihangChen-ee/FCGS/blob/main/dataset/download_DL3DV-GS-960P.py).
-- Training set can be found [here](https://github.com/YihangChen-ee/FCGS/blob/main/dataset/hash_name_train.txt).
-- Testing set can be found [here](https://github.com/YihangChen-ee/FCGS/blob/main/dataset/hash_name_test.txt).
 
 ## Run
 FCGS can *directly* compress any existing 3DGS representations to bitstreams. The input should be a *.ply* file following the 3DGS format.
